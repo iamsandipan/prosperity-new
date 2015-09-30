@@ -3,7 +3,7 @@ package com.prosperity.dao.model;
 public class User {
 
 	private String login;
-	private String password;
+	private String hashPassword;
 	private String phone;
 	
 	public String getLogin() {
@@ -12,11 +12,11 @@ public class User {
 	public void setLogin(String login) {
 		this.login = login;
 	}
-	public String getPassword() {
-		return password;
+	public String getHashPassword() {
+		return hashPassword;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setHashPassword(String password) {
+		this.hashPassword = password;
 	}
 	public String getPhone() {
 		return phone;
