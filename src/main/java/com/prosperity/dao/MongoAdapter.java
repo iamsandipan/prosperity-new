@@ -10,5 +10,10 @@ public class MongoAdapter {
 		mongoClient.getDatabase("users");
 		
 	}
+	
+	public String getDigest(String password, String salt){
+		
+		return "";
+	}
 
 }
