@@ -2,11 +2,14 @@ package com.prosperity.dao;
 
 import java.util.Arrays;
 
+import org.springframework.stereotype.Service;
+
 import com.mongodb.DB;
 import com.mongodb.MongoClient;
 import com.mongodb.ServerAddress;
 import com.mongodb.client.MongoDatabase;
 
+@Service
 public class MongoAdapter {
 
 	public void connectToMongo() {
