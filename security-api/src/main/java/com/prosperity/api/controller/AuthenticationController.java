@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.prosperity.api.model.Greeting;
+import com.prosperity.api.model.UserDTO;
 
 @RestController
 public class AuthenticationController {
@@ -14,10 +15,18 @@ public class AuthenticationController {
     private final AtomicLong counter = new AtomicLong();
 
     @RequestMapping("/greeting")
-    public Greeting addUser(@RequestParam(value="name", defaultValue="World") String name) {
+    public Greeting greet(@RequestParam(value="name", defaultValue="World") String name) {
         return new Greeting(counter.incrementAndGet(),
                             String.format(template, name));
     }
+    
+    @RequestMapping("/add")
+    public UserDTO addUser() {
+    	UserDTO user1 = new UserDTO();
+    	user1.setEmail("aaa@gmail.com");
+        return user1;
+    }
+
 }
 
 
