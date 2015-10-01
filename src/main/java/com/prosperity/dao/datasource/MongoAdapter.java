@@ -39,11 +39,7 @@ public class MongoAdapter {
 	
 	
 	public <T> void update(T t, String collectionName) {
-		MongoCollection<Document> coll = getCollection(collectionName);
-		Gson gson = new Gson();
-		UUID x = UUID.randomUUID();
-		Document doc = new Document(x.toString(), gson.toJson(t));
-		coll.insertOne(doc);
+		
 	}
 	
 	
