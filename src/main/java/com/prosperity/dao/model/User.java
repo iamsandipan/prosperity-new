@@ -1,7 +1,7 @@
 package com.prosperity.dao.model;
 
 public class User {
-
+	private String id;
 	private String login;
 	private String hashPassword;
 	private String phone;
@@ -23,5 +23,11 @@ public class User {
 	}
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
 	}
 }

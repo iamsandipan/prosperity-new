@@ -8,6 +8,7 @@
 		<spring-version>4.2.1.RELEASE</spring-version>
 		<mongo-version>3.0.2</mongo-version>
 		<junit-version>4.11</junit-version>
+		<gson-version>2.3.1</gson-version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -31,6 +32,12 @@
 				<artifactId>spring-context</artifactId>
 				<version>${spring-version}</version>
 			</dependency>
+			<dependency>
+				<groupId>com.google.code.gson</groupId>
+				<artifactId>gson</artifactId>
+				<version>${gson-version}</version>
+			</dependency>
+
 
 		</dependencies>
 	</dependencyManagement>
@@ -50,7 +57,10 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>4.0.0.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
 		</dependency>
 
 
