@@ -1,18 +1,35 @@
 package com.prosperity.dao;
 
+import java.util.Arrays;
+
+import com.mongodb.DB;
 import com.mongodb.MongoClient;
+import com.mongodb.ServerAddress;
+import com.mongodb.client.MongoDatabase;
 
 public class MongoAdapter {
-	
-	public void connectToMongo(){
-		MongoClient mongoClient = new MongoClient();
-		
-		mongoClient.getDatabase("users");
-		
+
+	public void connectToMongo() {
+		// or
+		MongoClient mongoClient = new MongoClient(Arrays.asList(new ServerAddress("localhost", 27017)));
+
+		MongoDatabase db = mongoClient.getDatabase("prosperitydb");
+
 	}
-	
-	public String getDigest(String password, String salt){
-		
+
+	public static void main(String[] args) {
+		try {
+			MongoAdapter adap = new MongoAdapter();
+			adap.connectToMongo();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	public String getDigest(String password, String salt) {
+
 		return "";
 	}
 
