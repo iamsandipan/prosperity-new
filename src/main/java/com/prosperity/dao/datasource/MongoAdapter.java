@@ -1,4 +1,4 @@
-package com.prosperity.dao;
+package com.prosperity.dao.datasource;
 
 import java.util.Arrays;
 
